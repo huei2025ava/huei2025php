@@ -51,7 +51,7 @@
     <h2>🧮 PHP 質數判斷練習</h2>
     <p>練習巢狀迴圈、條件判斷與 sqrt() 開根號優化。</p>
     <a href="./for_pra/ch4_for.php">▶ 執行程式</a>
-    <a href="./for_pra/README.md">📘 查看說明筆記</a>
+    <a href="./show_readme.php?file=for_pra/README.md">📘 查看說明筆記</a>
   </div>
 
   <footer style="margin-top:40px; color:#777;">
