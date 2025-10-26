@@ -50,8 +50,15 @@
   <div class="card">
     <h2>🧮 PHP 質數判斷練習</h2>
     <p>練習巢狀迴圈、條件判斷與 sqrt() 開根號優化。</p>
-    <a href="./for_pra/ch4_for.php">▶ 執行程式</a>
+    <a href="./for_pra/for_prime.php">▶ 執行程式</a>
     <a href="./show_readme.php?file=for_pra/README.md">📘 查看說明筆記</a>
+  </div>
+
+  <div class="card">
+    <h2>🧮 99乘法表練習</h2>
+    <p>練習巢狀迴圈、條件判斷</p>
+    <a href="./pra_99/pra_99.php">▶ 執行程式</a>
+    <a href="./show_readme.php?file=pra_99/README.md">📘 查看說明筆記</a>
   </div>
 
   <footer style="margin-top:40px; color:#777;">
