@@ -61,6 +61,20 @@
     <a href="./show_readme.php?file=pra_99/README.md">📘 查看說明筆記</a>
   </div>
 
+  <div class="card">
+    <h2>🧮 while 尋找字元</h2>
+    <p>練習巢狀迴圈、條件判斷</p>
+    <a href="./pra_while/while.php">▶ 執行程式</a>
+    <a href="./show_readme.php?file=pra_99/README.md">📘 查看說明筆記</a>
+  </div>
+
+  <div class="card">
+    <h2>🧮 以 * 符號排列出圖形</h2>
+    <p>練習巢狀迴圈、條件判斷</p>
+    <a href="./pra_triangle/triangle.php">▶ 執行程式</a>
+    <a href="./show_readme.php?file=pra_99/README.md">📘 查看說明筆記</a>
+  </div>
+
   <footer style="margin-top:40px; color:#777;">
     <p>© 2025 Huei — PHP 學習紀錄</p>
   </footer>
