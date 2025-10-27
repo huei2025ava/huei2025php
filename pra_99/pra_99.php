@@ -26,7 +26,8 @@
 </head>
 
 <body>
-  <div>
+
+<div>
     <?php
     $count = 0;
 
@@ -44,6 +45,41 @@
           echo "<td>{$j}</td>";
         } else if ($j == 0) {
           echo "<td>{$i}</td>";
+        } else {
+          echo "<td style='background-color:white;'>" . $result . "</td>";
+        }
+        // echo "<td>{$i}/{$j}/{$result}</td>";
+      }
+      echo "</tr>";
+    }
+    echo "</table>";
+    echo "一共執行" . $count . "迴圈";
+    ?>
+  </div>
+
+  <div>
+    <?php
+
+    // 右上消失版
+    $count = 0;
+
+    echo "<table border = 1>";
+    for ($i = 0; $i <= 9; $i++) {
+      echo "<tr>";
+      for ($j = 0; $j <= 9; $j++) {
+
+        $result = $i * $j;
+        $count++;
+        if ($i == 0 && $j == 0) {
+
+          echo "<td></td>";
+        } else if ($i == 0) {
+          echo "<td>{$j}</td>";
+        } else if ($j == 0) {
+          echo "<td>{$i}</td>";
+          // 看x ， y軸的概念，因為要消失的td位置，$j 都大於 $i
+        } else if($i < $j){
+          echo "<td></td>";
         } else {
           echo "<td style='background-color:white;'>" . $result . "</td>";
         }
