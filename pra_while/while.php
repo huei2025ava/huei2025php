@@ -37,21 +37,24 @@
     //  mb_strlen();
 
     $str = "需要我把這個概念變成一個練習題（引導式，不直接引導給答案";
-    $search = "引導";
+    $search = "這個";
     $isRight = false;
     $j = 0;
     $long = mb_strlen($str) - mb_strlen($search) + 1;
+    $count = 0;
 
-    while ($isRight = false && $j <= $long) {
+    while ($isRight == false && $j <= $long) {
         $target = mb_substr($str, $j, mb_strlen($search));
         if ($search == $target) {
             $isRight = true;
-            echo "第" . ($j + 1) . "個位置，找到" .$search . "了<br>";
         }
-        $i++;
+        $count++;
+        $j++;
     }
 
-    if (!$isRight) {
+    if ($isRight) {
+        echo "第" . ($j + 1) . "個位置，找到" .$search . "了<br>";
+    } else {
         echo "找不到";
     }
 
