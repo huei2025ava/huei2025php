@@ -36,10 +36,10 @@
         <tr>
             <?php
             echo "<td></td>";
-            foreach ($subjects as $sub) {
-                echo "<td>" . $sub . "</td>";
-            }
-            ?>
+    foreach ($subjects as $sub) {
+        echo "<td>" . $sub . "</td>";
+    }
+    ?>
         </tr>
 
         <?php
@@ -51,7 +51,7 @@
             }
             echo "</tr>";
         }
-        ?>
+    ?>
     </table>
 
     <?php
@@ -103,7 +103,28 @@
         }
     }
     echo "</table>";
+    // 用99陣列的索引，來快速搜尋相乘的值，用foreach要81次
+    $i = 8;
+    $j = 2;
+    $count = 0;
+    foreach ($ninetimes as $index => $value) {
+        if (($i - 1) * 9 + ($j - 1) == $index) {
+            echo  $value;
+        }        $count++;
+    }
+    echo "<br>";
+    echo $count."次";
+    echo "<hr>";
 
+    // 99陣列的索引的簡化版，因為馬上算出索引，不用加foreach，從要跑81次，改成只要1次，符合「查表」的思維
+    $count = 0;
+    $index = ($i - 1) * 9 + ($j - 1);
+    $count++;
+    echo $ninetimes[$index];
+
+    echo "<br>";
+    echo $count."次";
+    echo "<hr>";
 
     // 陣列閏年
     $year = [];
