@@ -44,13 +44,28 @@
 
     <h2>子字串取用</h2>
 
-    <p>將"The reason why a great man is great is tht he resolves to be a great man”只取前十字成為” The reason…"</p>
+    <li>將"The reason why a great man is great is tht he resolves to be a great man”只取前十字成為” The reason…"</li>
     <?php
     $str="The reason why a great man is great is that he resolves to be a great man";
     $pre=mb_substr($str,0,10);
 
     echo $pre;
     echo "...";
+    ?>
+
+    <h2>尋找字串與HTML、css整合應用</h2>
+
+    <li>給定一個句子，將指定的關鍵字放大</li>
+    <li>“學會PHP網頁程式設計，薪水會加倍，工作會好找”</li>
+    <li>請將上句中的 “程式設計” 放大字型或變色.</li>
+
+    <?php 
+    $str="學會PHP網頁程式設計，薪水會加倍，工作會好找";
+    $keyword="程式設計";
+    $change="<span style='font-size: 26px;color: lightcoral';>{$keyword}</span>";
+
+    $target=str_replace($keyword,$change,$str);
+    echo $target;
     ?>
 </body>
 </html>
