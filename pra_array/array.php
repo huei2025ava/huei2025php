@@ -125,6 +125,7 @@
     echo "<br>";
     echo $count."次";
     echo "<hr>";
+    echo $ninetimes[7][4];
 
     // 陣列閏年
     $year = [];

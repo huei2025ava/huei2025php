@@ -82,6 +82,13 @@
     <a href="./show_readme.php?file=pra_99/README.md">📘 查看說明筆記</a>
   </div>
 
+  <div class="card">
+    <h2>🧮 strings</h2>
+    <p></p>
+    <a href="./pra_str/str.php">▶ 執行程式</a>
+    <a href="./show_readme.php?file=pra_99/README.md">📘 查看說明筆記</a>
+  </div>
+
   <footer style="margin-top:40px; color:#777;">
     <p>© 2025 Huei — PHP 學習紀錄</p>
   </footer>
