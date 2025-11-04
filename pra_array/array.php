@@ -105,7 +105,7 @@
     echo "</table>";
     // 用99陣列的索引，來快速搜尋相乘的值，用foreach要81次
     $i = 8;
-    $j = 2;
+    $j = 4;
     $count = 0;
     foreach ($ninetimes as $index => $value) {
         if (($i - 1) * 9 + ($j - 1) == $index) {
@@ -125,7 +125,11 @@
     echo "<br>";
     echo $count."次";
     echo "<hr>";
-    echo $ninetimes[7][4];
+    // 取出二維陣列的元素，但因為 $ninetimes 是一維陣列，$ninetimes[6]是1x7=7
+    // 他直接把1x7=7變成["1","x","7","=","7",]，索引 4 是 7，
+    // 輸出結果為7
+    echo $ninetimes[6][4];
+
 
     // 陣列閏年
     $year = [];
@@ -140,20 +144,49 @@
     echo "</pre>";
 
     $year9 = [];
+    $count = 0;
     for ($year2 = 2025; $year2 < 2525; $year2++) {
         if (($year2 % 4 == 0 && $year2 % 100 != 0) || $year2 % 400 == 0) {
             $year9[$year2] = true;
         }
     }
 
-    echo $year9[2028];
+    echo "<pre>";
+    print_r($year9);
+    echo "</pre>";
+
+    $serchyear = 2088;
+    $cout = 0;
+
+    echo $serchyear."年，";
+    if (isset($year9[$serchyear])) {
+        echo "是閏年";
+    } else {
+        echo "不是閏年";
+    }
+    $count++;
+    echo "<br>";
+    echo "共搜尋".$count."次";
+
     echo "<hr>";
-    echo in_array(2352, $year);
+    echo in_array(2028, $year);
 
     // 威力彩隨機號碼，無重複，用陣列
     echo "<hr>";
-    echo rand(1, 38)
+ 
+    $number = [];
+    while (count($number) < 6) {
+           $random = rand(1, 38);
+        if (!in_array($random, $number)) {
+            $number[] = $random;
+        }
+    }
 
+    echo "<pre>";
+    print_r($number);
+    echo "</pre>";
+
+    echo "中獎號碼是".implode("，" , $number);
     ?>
 </body>
 
