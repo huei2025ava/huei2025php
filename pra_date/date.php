@@ -108,47 +108,37 @@
     for ($i = 0;$i < $monthWeeks * 7;$i++) {
         // 簡短版
         if ($i % 7 == 0) {
-            # code...
-        }
-        // 重複太多一樣的程式
-        if ($i % 7 == 0) {
             echo "<tr>";
-            if (date("m", strtotime("+$i days", $tableFirstDay)) !== $month) {
-                echo "<td style=\"color:lightgray\">";
-                echo date("d", strtotime("+$i days", $tableFirstDay));
-                echo "</td>";
-            } else {
-                echo "<td>";
-                echo date("d", strtotime("+$i days", $tableFirstDay));
-                echo "</td>";
-            }
-        } else {
-            if (date("m", strtotime("+$i days", $tableFirstDay)) !== $month) {
-                echo "<td style=\"color:lightgray\">";
-                echo date("d", strtotime("+$i days", $tableFirstDay));
-                echo "</td>";
-            } else {
-                echo "<td>";
-                echo date("d", strtotime("+$i days", $tableFirstDay));
-                echo "</td>";
-            }
         }
+
+        $currentDate = strtotime("+$i days", $tableFirstDay);
+        $style = "";
+        if (date("m", $currentDate) !== $month) {
+            $style .= "color:lightgray;";
+        }
+
+        if ((date("w", $currentDate) == 6) || date("w", $currentDate) == 0) {
+            $style .= "background-color: lightpink;";
+        }
+
+        echo "<td style='$style'>";
+        echo date("d", $currentDate);
+        echo "</td>";
 
         if ($i % 7 == 6) {
             echo "</tr>";
         }
-
     }
     echo "</table>";
 
     // 用flex-box製作月曆(因為要做行事曆放代辦事項等多種功能，用table很難做，div比較好處理)
     echo "<div class='container'>";
-    for ($i=0; $i < $monthWeeks*7; $i++) { 
+    for ($i = 0; $i < $monthWeeks * 7; $i++) {
         echo"<div>";
         echo date("d", strtotime("+$i days", $tableFirstDay));
         echo "</div>";
     }
-     echo "</div>";
+    echo "</div>";
     ?>
 </body>
 </html>
