@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: "微軟正黑體";
-      background-color: #9aedf0ff;
+      background-color: #a6dbb7ff;
       margin: 0;
       padding: 0;
     }
@@ -39,7 +39,7 @@
       font-size: 16px;
     }
     input[type="submit"] {
-      background-color: #007bff;
+      background-color: #44634fff;
       color: white;
       border: none;
       padding: 10px;
@@ -48,7 +48,7 @@
       font-size: 16px;
     }
     input[type="submit"]:hover {
-      background-color: #0056b3;
+      background-color: #44634fff;
     }
     /*  萬年曆樣式 */
     .calendar {
@@ -57,7 +57,7 @@
       text-align: center;
     }
     .calendar th {
-      background-color: #007bff;
+      background-color: #44634fff;
       color: white;
       padding: 8px;
     }
@@ -78,7 +78,7 @@
       margin: 10px 0;
     }
     .nav a {
-      color: #007bff;
+      color: #2e3a38ff;
       text-decoration: none;
       font-weight: bold;
     }
