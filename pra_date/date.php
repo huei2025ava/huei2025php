@@ -5,37 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date</title>
         <style>;
-            table{
-            border-collapse:collapse;
-            max-width:70%;
-            min-width:500px;
-            margin: 10px auto;
-            }    
-            table td,table th{
-            border:1px solid #999;
-            padding:5px 10px;
-            text-align:center;
-            }
-            table th{
-            background:skyblue;
-            }
-            /* flex-box的月曆 */
-            .container {
-                width: 700px;
-                display: flex;
-                flex-wrap: wrap;     
-                margin: auto;         
-            }
-            .container div {
-                background-color: antiquewhite;
-                width: calc(700px / 7) ;
-                height: 100px;
-                text-align: center;
-                line-height: 100px;
-                border: 1px solid black;
-                
-            }
-</style>;
+        .container-table{
+        margin: auto;
+        }
+        table{
+        border-collapse:collapse;
+        max-width:60%;
+        min-width:500px;
+        margin: 10px auto;
+        }    
+        table td,table th{
+        border:1px solid #999;
+        padding:5px 10px;
+        text-align:center;
+        }
+        table th{
+        background:skyblue;
+        }
+        /* flex-box的月曆 */
+        .container {
+            width: 700px;
+            display: flex;
+            flex-wrap: wrap;     
+            margin: auto;         
+        }
+        .container div {
+            background-color: antiquewhite;
+            width: calc(650px / 7) ;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid black;
+            
+        }
+</style>
 <h2>月曆製作提示</h2>;
 </head>
 <body>
@@ -92,7 +95,9 @@
 
 
     //開始畫月曆
-    echo "<h2 style='text-align:center'>".$month."月";
+
+    echo "<h2 style='text-align:center'>".$month."月</h2>";
+    echo "<div class='container-table'>";
     echo "<table>";
     echo "<tr>";
     echo "<th>日</th>";
@@ -130,6 +135,7 @@
         }
     }
     echo "</table>";
+    echo "</div>";
 
     // 用flex-box製作月曆(因為要做行事曆放代辦事項等多種功能，用table很難做，div比較好處理)
     echo "<div class='container'>";

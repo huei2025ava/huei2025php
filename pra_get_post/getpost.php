@@ -92,7 +92,7 @@
   <!-- 登入功能 -->
   <h2>POST：登入檢查</h2>
   <div class="container">
-    <form action="practice.php" method="post">
+    <form action="getpost.php" method="post">
       <label for="account">帳號：</label>
       <input type="text" id="account" name="account" required>
 
@@ -102,6 +102,10 @@
       <input type="submit" value="登入">
     </form>
   </div>
+
+  <?php 
+   $account = $_POST
+  ?>
 
   <!-- 萬年曆功能 -->
   <h2>GET：萬年曆</h2>
